@@ -1,6 +1,5 @@
 #include <iostream>
-#include <algorithm>
-#include <cstring>
+#include <string>
  using namespace std;
  string DAYS[7] = {"sunday","monday","tuesday","wednesday","thursday","friday","saturday"};
  enum days{
