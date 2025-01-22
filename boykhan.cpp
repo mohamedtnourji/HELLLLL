@@ -2,30 +2,20 @@
 #include <algorithm>
 #include <cstring>
  using namespace std;
- string DAYS[7] = {"sunday","monday","tuesday","wdnesday","thursday","friday","saturday"};
+ string DAYS[7] = {"sunday","monday","tuesday","wednesday","thursday","friday","saturday"};
  enum days{
-	 sunday = 1,monday,tuesday,wdnesday,thursday,friday,saturday
+	 sun =1,mon,tue,wed,thur,fri,sat
  };
   class tnourji{
-private:
-	  
+	  days d[7];
    public:
-   days d[7];
-   void set_day(days D[7]){
-	   for(int i = 0 ; i < 7 ; i++){
-		   d[i] = D[i];
-	   }
-   }
-	   void print(){
-		   for(int i = 0 ; i < 7 ; i++){
-			   cout << "the day is: " << DAYS[i] << " and the number is: " << d[i] << endl;
-		   }
-	   }
+   void set(days D[7]){for(int i = 0 ; i < 7 ; i++){d[i] = D[i]; }}
+	   void p(){ for(int i = 0 ; i < 7 ; i++){cout << "the day is: " << DAYS[i] << " and the number is: " << d[i] << endl;}}
    };
  int main(){
 	tnourji tn;
-	days xn[7] = { sunday,monday,tuesday,wdnesday,thursday,friday,saturday};
-	tn.set_day(xn);
-	tn.print();
+	days xn[7] = {sun,mon,tue,wed,thur,fri,sat};
+	tn.set(xn);
+	tn.p();
 	 return 0;
  }
