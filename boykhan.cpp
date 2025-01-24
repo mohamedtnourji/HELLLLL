@@ -1,20 +1,36 @@
 #include <iostream>
-#include <string>
+#include <algorithm>
+#include <cstring>
  using namespace std;
- string DAYS[7] = {"sunday","monday","tuesday","wednesday","thursday","friday","saturday"};
- enum days{
-	 sun =1,mon,tue,wed,thur,fri,sat
- };
   class tnourji{
-	  days d[7];
-   public:
-   void set(days D[7]){for(int i = 0 ; i < 7 ; i++){d[i] = D[i]; }}
-	   void p(){ for(int i = 0 ; i < 7 ; i++){cout << "the day is: " << DAYS[i] << " and the number is: " << d[i] << endl;}}
+	private:
+	int width,height;
+	public:
+	 void change_value(int ,int );
+	 int area();
+	 tnourji moha(tnourji ob);
    };
+     void tnourji::change_value(int x,int y){
+	   width = x;
+       height = y;	   
+   }
+   
+   int tnourji::area(){
+	   return width * height;
+   }
+   
+   	tnourji tnourji::moha(tnourji ob){
+		tnourji tn;
+		tn.width = ob.width * 2;
+		tn.height = ob.height * 2;
+		return tn;
+	}
+	
  int main(){
-	tnourji tn;
-	days xn[7] = {sun,mon,tue,wed,thur,fri,sat};
-	tn.set(xn);
-	tn.p();
+	tnourji vari,xml;
+	vari.change_value(3,2);
+	cout << vari.area() << endl;
+	xml =  tnourji(vari);
+	std::cout << xml.area() << std::endl;
 	 return 0;
  }
